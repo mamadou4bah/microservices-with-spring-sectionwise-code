@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Microservices-Docker-Kubernettes.iml" filepath="$PROJECT_DIR$/.idea/Microservices-Docker-Kubernettes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/section4/accounts/accounts.iml" filepath="$PROJECT_DIR$/section4/accounts/accounts.iml" />
+      <module fileurl="file://$PROJECT_DIR$/section4/cards/cards.iml" filepath="$PROJECT_DIR$/section4/cards/cards.iml" />
+      <module fileurl="file://$PROJECT_DIR$/section4/loans/loans.iml" filepath="$PROJECT_DIR$/section4/loans/loans.iml" />
+    </modules>
+  </component>
+</project>
