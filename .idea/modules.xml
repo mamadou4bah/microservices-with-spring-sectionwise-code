@@ -2,10 +2,63 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Microservices-Docker-Kubernettes.iml" filepath="$PROJECT_DIR$/.idea/Microservices-Docker-Kubernettes.iml" />
       <module fileurl="file://$PROJECT_DIR$/section4/accounts/accounts.iml" filepath="$PROJECT_DIR$/section4/accounts/accounts.iml" />
-      <module fileurl="file://$PROJECT_DIR$/section4/cards/cards.iml" filepath="$PROJECT_DIR$/section4/cards/cards.iml" />
+      <module fileurl="file://$PROJECT_DIR$/section5/accounts/accounts (1).iml" filepath="$PROJECT_DIR$/section5/accounts/accounts (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/section_18/accounts/accounts (10).iml" filepath="$PROJECT_DIR$/section_18/accounts/accounts (10).iml" />
+      <module fileurl="file://$PROJECT_DIR$/section7/accounts/accounts (2).iml" filepath="$PROJECT_DIR$/section7/accounts/accounts (2).iml" />
+      <module fileurl="file://$PROJECT_DIR$/section8/accounts/accounts (3).iml" filepath="$PROJECT_DIR$/section8/accounts/accounts (3).iml" />
+      <module fileurl="file://$PROJECT_DIR$/section9/accounts/accounts (4).iml" filepath="$PROJECT_DIR$/section9/accounts/accounts (4).iml" />
+      <module fileurl="file://$PROJECT_DIR$/section_10/accounts/accounts (5).iml" filepath="$PROJECT_DIR$/section_10/accounts/accounts (5).iml" />
+      <module fileurl="file://$PROJECT_DIR$/section_11/accounts/accounts (6).iml" filepath="$PROJECT_DIR$/section_11/accounts/accounts (6).iml" />
+      <module fileurl="file://$PROJECT_DIR$/section_12/accounts/accounts (7).iml" filepath="$PROJECT_DIR$/section_12/accounts/accounts (7).iml" />
+      <module fileurl="file://$PROJECT_DIR$/section_13/accounts/accounts (8).iml" filepath="$PROJECT_DIR$/section_13/accounts/accounts (8).iml" />
+      <module fileurl="file://$PROJECT_DIR$/section_17/accounts/accounts (9).iml" filepath="$PROJECT_DIR$/section_17/accounts/accounts (9).iml" />
+      <module fileurl="file://$PROJECT_DIR$/section5/cards/cards (1).iml" filepath="$PROJECT_DIR$/section5/cards/cards (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/section_18/cards/cards (10).iml" filepath="$PROJECT_DIR$/section_18/cards/cards (10).iml" />
+      <module fileurl="file://$PROJECT_DIR$/section7/cards/cards (2).iml" filepath="$PROJECT_DIR$/section7/cards/cards (2).iml" />
+      <module fileurl="file://$PROJECT_DIR$/section8/cards/cards (3).iml" filepath="$PROJECT_DIR$/section8/cards/cards (3).iml" />
+      <module fileurl="file://$PROJECT_DIR$/section9/cards/cards (4).iml" filepath="$PROJECT_DIR$/section9/cards/cards (4).iml" />
+      <module fileurl="file://$PROJECT_DIR$/section_10/cards/cards (5).iml" filepath="$PROJECT_DIR$/section_10/cards/cards (5).iml" />
+      <module fileurl="file://$PROJECT_DIR$/section_11/cards/cards (6).iml" filepath="$PROJECT_DIR$/section_11/cards/cards (6).iml" />
+      <module fileurl="file://$PROJECT_DIR$/section_12/cards/cards (7).iml" filepath="$PROJECT_DIR$/section_12/cards/cards (7).iml" />
+      <module fileurl="file://$PROJECT_DIR$/section_13/cards/cards (8).iml" filepath="$PROJECT_DIR$/section_13/cards/cards (8).iml" />
+      <module fileurl="file://$PROJECT_DIR$/section_17/cards/cards (9).iml" filepath="$PROJECT_DIR$/section_17/cards/cards (9).iml" />
+      <module fileurl="file://$PROJECT_DIR$/section4/cards/configserver.iml" filepath="$PROJECT_DIR$/section4/cards/configserver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/section8/configserver/configserver (1).iml" filepath="$PROJECT_DIR$/section8/configserver/configserver (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/section9/configserver/configserver (2).iml" filepath="$PROJECT_DIR$/section9/configserver/configserver (2).iml" />
+      <module fileurl="file://$PROJECT_DIR$/section_10/configserver/configserver (3).iml" filepath="$PROJECT_DIR$/section_10/configserver/configserver (3).iml" />
+      <module fileurl="file://$PROJECT_DIR$/section_11/configserver/configserver (4).iml" filepath="$PROJECT_DIR$/section_11/configserver/configserver (4).iml" />
+      <module fileurl="file://$PROJECT_DIR$/section_12/configserver/configserver (5).iml" filepath="$PROJECT_DIR$/section_12/configserver/configserver (5).iml" />
+      <module fileurl="file://$PROJECT_DIR$/section_13/configserver/configserver (6).iml" filepath="$PROJECT_DIR$/section_13/configserver/configserver (6).iml" />
+      <module fileurl="file://$PROJECT_DIR$/section_17/configserver/configserver (7).iml" filepath="$PROJECT_DIR$/section_17/configserver/configserver (7).iml" />
+      <module fileurl="file://$PROJECT_DIR$/section_18/configserver/configserver (8).iml" filepath="$PROJECT_DIR$/section_18/configserver/configserver (8).iml" />
+      <module fileurl="file://$PROJECT_DIR$/section8/eurekaserver/eurekaserver.iml" filepath="$PROJECT_DIR$/section8/eurekaserver/eurekaserver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/section9/eurekaserver/eurekaserver (1).iml" filepath="$PROJECT_DIR$/section9/eurekaserver/eurekaserver (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/section_10/eurekaserver/eurekaserver (2).iml" filepath="$PROJECT_DIR$/section_10/eurekaserver/eurekaserver (2).iml" />
+      <module fileurl="file://$PROJECT_DIR$/section_11/eurekaserver/eurekaserver (3).iml" filepath="$PROJECT_DIR$/section_11/eurekaserver/eurekaserver (3).iml" />
+      <module fileurl="file://$PROJECT_DIR$/section_12/eurekaserver/eurekaserver (4).iml" filepath="$PROJECT_DIR$/section_12/eurekaserver/eurekaserver (4).iml" />
+      <module fileurl="file://$PROJECT_DIR$/section_13/eurekaserver/eurekaserver (5).iml" filepath="$PROJECT_DIR$/section_13/eurekaserver/eurekaserver (5).iml" />
+      <module fileurl="file://$PROJECT_DIR$/section_17/eurekaserver/eurekaserver (6).iml" filepath="$PROJECT_DIR$/section_17/eurekaserver/eurekaserver (6).iml" />
+      <module fileurl="file://$PROJECT_DIR$/section_18/eurekaserver/eurekaserver (7).iml" filepath="$PROJECT_DIR$/section_18/eurekaserver/eurekaserver (7).iml" />
+      <module fileurl="file://$PROJECT_DIR$/section_10/gatewayserver/gatewayserver.iml" filepath="$PROJECT_DIR$/section_10/gatewayserver/gatewayserver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/section_11/gatewayserver/gatewayserver (1).iml" filepath="$PROJECT_DIR$/section_11/gatewayserver/gatewayserver (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/section_12/gatewayserver/gatewayserver (2).iml" filepath="$PROJECT_DIR$/section_12/gatewayserver/gatewayserver (2).iml" />
+      <module fileurl="file://$PROJECT_DIR$/section_13/gatewayserver/gatewayserver (3).iml" filepath="$PROJECT_DIR$/section_13/gatewayserver/gatewayserver (3).iml" />
+      <module fileurl="file://$PROJECT_DIR$/section_17/gatewayserver/gatewayserver (4).iml" filepath="$PROJECT_DIR$/section_17/gatewayserver/gatewayserver (4).iml" />
+      <module fileurl="file://$PROJECT_DIR$/section_18/gatewayserver/gatewayserver (5).iml" filepath="$PROJECT_DIR$/section_18/gatewayserver/gatewayserver (5).iml" />
+      <module fileurl="file://$PROJECT_DIR$/section2/helloworldservice/helloworldservice.iml" filepath="$PROJECT_DIR$/section2/helloworldservice/helloworldservice.iml" />
       <module fileurl="file://$PROJECT_DIR$/section4/loans/loans.iml" filepath="$PROJECT_DIR$/section4/loans/loans.iml" />
+      <module fileurl="file://$PROJECT_DIR$/section5/loans/loans (1).iml" filepath="$PROJECT_DIR$/section5/loans/loans (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/section_18/loans/loans (10).iml" filepath="$PROJECT_DIR$/section_18/loans/loans (10).iml" />
+      <module fileurl="file://$PROJECT_DIR$/section7/loans/loans (2).iml" filepath="$PROJECT_DIR$/section7/loans/loans (2).iml" />
+      <module fileurl="file://$PROJECT_DIR$/section8/loans/loans (3).iml" filepath="$PROJECT_DIR$/section8/loans/loans (3).iml" />
+      <module fileurl="file://$PROJECT_DIR$/section9/loans/loans (4).iml" filepath="$PROJECT_DIR$/section9/loans/loans (4).iml" />
+      <module fileurl="file://$PROJECT_DIR$/section_10/loans/loans (5).iml" filepath="$PROJECT_DIR$/section_10/loans/loans (5).iml" />
+      <module fileurl="file://$PROJECT_DIR$/section_11/loans/loans (6).iml" filepath="$PROJECT_DIR$/section_11/loans/loans (6).iml" />
+      <module fileurl="file://$PROJECT_DIR$/section_12/loans/loans (7).iml" filepath="$PROJECT_DIR$/section_12/loans/loans (7).iml" />
+      <module fileurl="file://$PROJECT_DIR$/section_13/loans/loans (8).iml" filepath="$PROJECT_DIR$/section_13/loans/loans (8).iml" />
+      <module fileurl="file://$PROJECT_DIR$/section_17/loans/loans (9).iml" filepath="$PROJECT_DIR$/section_17/loans/loans (9).iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/microservices-with-spring-sectionwise-code.iml" filepath="$PROJECT_DIR$/.idea/microservices-with-spring-sectionwise-code.iml" />
     </modules>
   </component>
 </project>

@@ -1,3 +1,13 @@
+# Sommaire 
+* Deep dive on microservices architecture
+* Role of spring cloud, cloud native apps
+* Eureka & config server
+* Resilience4j pattern
+* Routing & handling cross cutting concerns
+* Distributed tracing, log aggregation & monitoring
+* Containerization unsing docker
+* Container orchestration using kubernetes
+
 # Master Microservices with Java, Spring, Docker, Kubernetes
 
 [![Image](https://udemy-image-web-upload.s3.amazonaws.com:443/redactor/raw/article_lecture/2022-08-02_02-27-57-b721336be301d3848be7ec92142e646c.png "Master Microservices with Java, Spring, Docker, Kubernetes")](https://www.udemy.com/course/master-microservices-with-spring-docker-kubernetes/?referralCode=9365DB9B7EE637F629A9)
