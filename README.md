@@ -48,7 +48,7 @@ Learn how to create enterprise and production ready Microservices with Spring, S
 - Spring Cloud Sleuth - https://spring.io/projects/spring-cloud-sleuth
 - The 12-factor App - https://12factor.net/
 - Docker - https://www.docker.com/
-- DockerHub - https://hub.docker.com/u/eazybytes
+- DockerHub - https://hub.docker.com/u/mamadou4bah
 - Cloud Native Buildpacks - https://buildpacks.io/
 - Resilience4j - https://resilience4j.readme.io/docs/getting-started
 - Zipkin - https://zipkin.io/
@@ -75,13 +75,13 @@ Learn how to create enterprise and production ready Microservices with Spring, S
 
 |     Docker Command       |     Description          |
 | ------------- | ------------- |
-| "docker build . -t eazybytes/accounts" | To generate a docker image based on a Dockerfile |
-| "docker run  -p 8081:8080 eazybytes/accounts" | To start a docker container based on a given image |
+| "docker build . -t mamadou4bah/accounts" | To generate a docker image based on a Dockerfile |
+| "docker run  -p 8081:8080 mamadou4bah/accounts" | To start a docker container based on a given image |
 | "docker images" | To list all the docker images present in the Docker server |
 | "docker image inspect image-id" | To display detailed image information for a given image id |
 | "docker image rm image-id" | To remove one or more images for a given image ids |
-| "docker image push docker.io/eazybytes/accounts" | To push an image or a repository to a registry |
-| "docker image pull docker.io/eazybytes/accounts" | To pull an image or a repository from a registry |
+| "docker push docker push docker.io/mamadou4bah/accounts:latest" | To push an image or a repository to a registry |
+| "docker image pull docker.io/mamadou4bah/accounts" | To pull an image or a repository from a registry |
 | "docker ps" | To show all running containers |
 | "docker ps -a" | To show all containers including running and stopped |
 | "docker container start container-id" | To start one or more stopped containers |
@@ -97,6 +97,13 @@ Learn how to create enterprise and production ready Microservices with Spring, S
 | "docker container prune" | To remove all stopped containers |
 | "docker compose up" | To create and start containers based on given docker compose file |
 | "docker compose stop" | To stop services |
+
+## Buildpacks   paketo buildpacks: to generate images without Dockerfile
+https://buildpacks.io/    https://paketo.io/
+
+|      Commands      |     Description          |
+| ------------- | ------------- |
+| "mvn spring-boot:build-image" | To generate image without using a Dockerfile |
 
 ## Kubernetes Commands used in the course
 
@@ -121,7 +128,7 @@ Learn how to create enterprise and production ready Microservices with Spring, S
 | "kubectl get configmap configmap-id" | To get the details of a given configmap |
 | "kubectl get events --sort-by=.metadata.creationTimestamp" | To get all the events occured inside your cluster |
 | "kubectl scale deployment accounts-deployment --replicas=3" | To increase the number of replicas for a deployment inside your cluster |
-| "kubectl set image deployment accounts-deployment accounts=eazybytes/accounts:k8s" | To set a new image for a deployment inside your cluster |
+| "kubectl set image deployment accounts-deployment accounts=mamadou4bah/accounts:k8s" | To set a new image for a deployment inside your cluster |
 | "kubectl rollout history deployment accounts-deployment" | To know the rollout history for a deployment inside your cluster |
 | "kubectl rollout undo deployment accounts-deployment --to-revision=1" | To rollback to a given revision for a deployment inside your cluster |
 | "kubectl autoscale deployment accounts-deployment --min=3 --max=10 --cpu-percent=70" | To create automatic scaling using HPA for a deployment inside your cluster |

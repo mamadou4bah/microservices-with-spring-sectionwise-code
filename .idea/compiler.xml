@@ -37,6 +37,7 @@
         <module name="helloworldservice" />
         <module name="accounts (7)" />
         <module name="cards (10)" />
+        <module name="cards" />
         <module name="accounts (3)" />
         <module name="loans (10)" />
         <module name="loans (5)" />
@@ -77,6 +78,7 @@
       <module name="accounts (7)" target="17" />
       <module name="accounts (8)" target="17" />
       <module name="accounts (9)" target="17" />
+      <module name="cards" target="17" />
       <module name="cards (1)" target="17" />
       <module name="cards (10)" target="17" />
       <module name="cards (2)" target="17" />
@@ -137,6 +139,7 @@
       <module name="accounts (7)" options="-parameters" />
       <module name="accounts (8)" options="-parameters" />
       <module name="accounts (9)" options="-parameters" />
+      <module name="cards" options="-parameters" />
       <module name="cards (1)" options="-parameters" />
       <module name="cards (10)" options="-parameters" />
       <module name="cards (2)" options="-parameters" />
