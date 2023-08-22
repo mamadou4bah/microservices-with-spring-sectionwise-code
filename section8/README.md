@@ -27,7 +27,7 @@ this **section8** where we focused on set up of **Eureka Server** inside our mic
 		<version>3.0.1</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.eaztbytes</groupId>
+	<groupId>com.mamadou4bah</groupId>
 	<artifactId>eurekaserver</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>eurekaserver</name>
@@ -74,7 +74,7 @@ this **section8** where we focused on set up of **Eureka Server** inside our mic
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
 					<image>
-						<name>eazybytes/${project.artifactId}</name>
+						<name>mamadou4bah/${project.artifactId}</name>
 					</image>
 				</configuration>
 			</plugin>
@@ -86,10 +86,10 @@ this **section8** where we focused on set up of **Eureka Server** inside our mic
 ```
 -  Open the SpringBoot main class **EurekaserverApplication.java** . We can always identify the main class in a Spring Boot project by looking for the annotation **@SpringBootApplication**. On top of this main class, please add annotation **'@EnableEurekaServer'**. This annotation will make your microservice to act as a Spring Cloud Netflix Eureka Server. After making the changes your **EurekaserverApplication.java** class should like below,
 
-### \src\main\java\com\eaztbytes\eurekaserver\EurekaserverApplication.java
+### \src\main\java\com\mamadou4bah\eurekaserver\EurekaserverApplication.java
 
 ```java
-package com.eaztbytes.eurekaserver;
+package com.mamadou4bah.eurekaserver;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -202,9 +202,9 @@ management.endpoint.shutdown.enabled=true
 - In order to set up Client side load balancing using **Feign client**, add **@EnableFeignClients** annotation on top of **AccountsApplication.java** class which is present inside **accounts** microservice.
 - Like discussed in the course, create two interfaces with the name **LoansFeignClient.java**,**CardsFeignClient.java** inside **accounts** microservice project. These two interfaces and the methods inside them will help to communicate with **loans** and **cards** microservices using Feign client from **accounts** microservice.
   These two interfaces should like below,
-### \accounts\src\main\java\com\eazybytes\accounts\service\client\LoansFeignClient.java
+### \accounts\src\main\java\com\mamadou4bah\accounts\service\client\LoansFeignClient.java
 ```java
-package com.eazybytes.accounts.service.client;
+package com.mamadou4bah.accounts.service.client;
 
 import java.util.List;
 
@@ -223,9 +223,9 @@ public interface LoansFeignClient {
 	List<Loans> getLoansDetails(@RequestBody Customer customer);
 }
 ```
-### \accounts\src\main\java\com\eazybytes\accounts\service\client\CardsFeignClient.java
+### \accounts\src\main\java\com\mamadou4bah\accounts\service\client\CardsFeignClient.java
 ```java
-package com.eazybytes.accounts.service.client;
+package com.mamadou4bah.accounts.service.client;
 
 import java.util.List;
 
@@ -245,12 +245,12 @@ public interface CardsFeignClient {
 }
 ```
 - In order to fetch the cards and loans details using Feign client from accounts microservice, update the **AccountsController.java** to expose a new REST API **/myCustomerDetails** like we discussed inside the course. Your **AccountsController.java** should look like below,
-### \accounts\src\main\java\com\eazybytes\accounts\controller\AccountsController.java
+### \accounts\src\main\java\com\mamadou4bah\accounts\controller\AccountsController.java
 ```java
 /**
  * 
  */
-package com.eazybytes.accounts.controller;
+package com.mamadou4bah.accounts.controller;
 
 import java.util.List;
 
@@ -333,9 +333,9 @@ public class AccountsController {
 }
 ```
 - Create the below three model classes inside **accounts** microservice which are needed by **/myCustomerDetails** REST API,
-### \accounts\src\main\java\com\eazybytes\accounts\model\Loans.java
+### \accounts\src\main\java\com\mamadou4bah\accounts\model\Loans.java
 ```java
-package com.eazybytes.accounts.model;
+package com.mamadou4bah.accounts.model;
 
 import java.sql.Date;
 
@@ -366,9 +366,9 @@ public class Loans {
 
 }
 ```
-### \accounts\src\main\java\com\eazybytes\accounts\model\Cards.java
+### \accounts\src\main\java\com\mamadou4bah\accounts\model\Cards.java
 ```java
-package com.eazybytes.accounts.model;
+package com.mamadou4bah.accounts.model;
 
 import java.sql.Date;
 
@@ -399,12 +399,12 @@ public class Cards {
 
 }
 ```
-### \accounts\src\main\java\com\eazybytes\accounts\model\CustomerDetails.java
+### \accounts\src\main\java\com\mamadou4bah\accounts\model\CustomerDetails.java
 ```java
 /**
  * 
  */
-package com.eazybytes.accounts.model;
+package com.mamadou4bah.accounts.model;
 
 import java.util.List;
 
@@ -413,7 +413,7 @@ import lombok.Setter;
 import lombok.ToString;
 
 /**
- * @author EazyBytes
+ * @author mamadou4bah
  *
  */
 @Getter
@@ -444,20 +444,20 @@ version: "3.8"
 services:
 
   configserver:
-    image: eazybytes/configserver:latest
+    image: mamadou4bah/configserver:latest
     mem_limit: 700m
     ports:
       - "8071:8071"
     networks:
-     - eazybank
+     - mbabank
    
   eurekaserver:
-    image: eazybytes/eurekaserver:latest
+    image: mamadou4bah/eurekaserver:latest
     mem_limit: 700m
     ports:
       - "8070:8070"
     networks:
-     - eazybank
+     - mbabank
     depends_on:
       - configserver
     deploy:
@@ -471,12 +471,12 @@ services:
       SPRING_CONFIG_IMPORT: configserver:http://configserver:8071/
       
   accounts:
-    image: eazybytes/accounts:latest
+    image: mamadou4bah/accounts:latest
     mem_limit: 700m
     ports:
       - "8080:8080"
     networks:
-      - eazybank
+      - mbabank
     depends_on:
       - configserver
       - eurekaserver
@@ -492,12 +492,12 @@ services:
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eurekaserver:8070/eureka/
   
   loans:
-    image: eazybytes/loans:latest
+    image: mamadou4bah/loans:latest
     mem_limit: 700m
     ports:
       - "8090:8090"
     networks:
-      - eazybank
+      - mbabank
     depends_on:
       - configserver
       - eurekaserver
@@ -513,12 +513,12 @@ services:
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eurekaserver:8070/eureka/
     
   cards:
-    image: eazybytes/cards:latest
+    image: mamadou4bah/cards:latest
     mem_limit: 700m
     ports:
       - "9000:9000"
     networks:
-      - eazybank
+      - mbabank
     depends_on:
       - configserver
       - eurekaserver
@@ -534,7 +534,7 @@ services:
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eurekaserver:8070/eureka/
       
 networks:
-  eazybank:
+  mbabank:
 ```
 ### \accounts\docker-compose\dev\docker-compose.yml
 	
@@ -544,20 +544,20 @@ version: "3.8"
 services:
 
   configserver:
-    image: eazybytes/configserver:latest
+    image: mamadou4bah/configserver:latest
     mem_limit: 700m
     ports:
       - "8071:8071"
     networks:
-     - eazybank
+     - mbabank
    
   eurekaserver:
-    image: eazybytes/eurekaserver:latest
+    image: mamadou4bah/eurekaserver:latest
     mem_limit: 700m
     ports:
       - "8070:8070"
     networks:
-     - eazybank
+     - mbabank
     depends_on:
       - configserver
     deploy:
@@ -571,12 +571,12 @@ services:
       SPRING_CONFIG_IMPORT: configserver:http://configserver:8071/
       
   accounts:
-    image: eazybytes/accounts:latest
+    image: mamadou4bah/accounts:latest
     mem_limit: 700m
     ports:
       - "8080:8080"
     networks:
-      - eazybank
+      - mbabank
     depends_on:
       - configserver
       - eurekaserver
@@ -592,12 +592,12 @@ services:
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eurekaserver:8070/eureka/
   
   loans:
-    image: eazybytes/loans:latest
+    image: mamadou4bah/loans:latest
     mem_limit: 700m
     ports:
       - "8090:8090"
     networks:
-      - eazybank
+      - mbabank
     depends_on:
       - configserver
       - eurekaserver
@@ -613,12 +613,12 @@ services:
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eurekaserver:8070/eureka/
     
   cards:
-    image: eazybytes/cards:latest
+    image: mamadou4bah/cards:latest
     mem_limit: 700m
     ports:
       - "9000:9000"
     networks:
-      - eazybank
+      - mbabank
     depends_on:
       - configserver
       - eurekaserver
@@ -634,7 +634,7 @@ services:
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eurekaserver:8070/eureka/
       
 networks:
-  eazybank:
+  mbabank:
 ```
 ### \accounts\docker-compose\prod\docker-compose.yml
 	
@@ -644,20 +644,20 @@ version: "3.8"
 services:
 
   configserver:
-    image: eazybytes/configserver:latest
+    image: mamadou4bah/configserver:latest
     mem_limit: 700m
     ports:
       - "8071:8071"
     networks:
-     - eazybank
+     - mbabank
    
   eurekaserver:
-    image: eazybytes/eurekaserver:latest
+    image: mamadou4bah/eurekaserver:latest
     mem_limit: 700m
     ports:
       - "8070:8070"
     networks:
-     - eazybank
+     - mbabank
     depends_on:
       - configserver
     deploy:
@@ -671,12 +671,12 @@ services:
       SPRING_CONFIG_IMPORT: configserver:http://configserver:8071/
       
   accounts:
-    image: eazybytes/accounts:latest
+    image: mamadou4bah/accounts:latest
     mem_limit: 700m
     ports:
       - "8080:8080"
     networks:
-      - eazybank
+      - mbabank
     depends_on:
       - configserver
       - eurekaserver
@@ -692,12 +692,12 @@ services:
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eurekaserver:8070/eureka/
   
   loans:
-    image: eazybytes/loans:latest
+    image: mamadou4bah/loans:latest
     mem_limit: 700m
     ports:
       - "8090:8090"
     networks:
-      - eazybank
+      - mbabank
     depends_on:
       - configserver
       - eurekaserver
@@ -713,12 +713,12 @@ services:
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eurekaserver:8070/eureka/
     
   cards:
-    image: eazybytes/cards:latest
+    image: mamadou4bah/cards:latest
     mem_limit: 700m
     ports:
       - "9000:9000"
     networks:
-      - eazybank
+      - mbabank
     depends_on:
       - configserver
       - eurekaserver
@@ -734,7 +734,7 @@ services:
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eurekaserver:8070/eureka/
       
 networks:
-  eazybank:
+  mbabank:
 ```
 -  Stop any running microservices inside your eclipse
 -  Based on the active profile that you want start the microservices, open the command line tool where the **docker-compose.yml** is present and run the docker compose command **"docker-compose up"** to start all the microservices containers with a single command. All the running containers can be validated by running a docker command **"docker ps"**.
