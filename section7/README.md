@@ -68,7 +68,7 @@ your pom.xml should looks like shown below,
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
 					<image>
-						<name>eazybytes/${project.artifactId}</name>
+						<name>mamadou4bah/${project.artifactId}</name>
 					</image>
 				</configuration>
 			</plugin>
@@ -100,7 +100,7 @@ public class ConfigserverApplication {
 }
 
 ```
-- Create a **config** folder under the path **'configserver\src\main\resources\'** and copy all the 9 property files related to **accounts, loans and cards** microservices like mentioned in the course. The 9 property files can be found at https://github.com/eazybytes/microservices-with-spring-sectionwise-code/tree/master/section7/configserver/src/main/resources/config
+- Create a **config** folder under the path **'configserver\src\main\resources\'** and copy all the 9 property files related to **accounts, loans and cards** microservices like mentioned in the course. The 9 property files can be found at https://github.com/mamadou4bah/microservices-with-spring-sectionwise-code/tree/master/section7/configserver/src/main/resources/config
 - Open the **application.properties** inside **configserver** microservices and make the following entries inside it which will help in reading the properties from a given classpath location. Please note that **encrypt.key** is optional and can be used only in the scenarios where you want **configserver** to handle the **encryption/decryption** of
 the properties like we discussed in the course.
 ### \src\main\resources\application.properties
@@ -109,7 +109,7 @@ spring.application.name=configserver
 spring.profiles.active=native
 spring.cloud.config.server.native.search-locations=classpath:/config
 server.port=8071
-encrypt.key=eazybytes
+encrypt.key=mamadou4bah
 ```
 -  Go to your Spring Boot main class **ConfigserverApplication.java** and right click-> Run As -> Java Application. This will start your Spring Boot application successfully at port 8071 which is the port we configured inside **application.properties**. Your can confirm the same by looking at the console logs.
 - Access the URLs like http://localhost:8071/accounts/default, http://localhost:8071/loans/dev, http://localhost:8071/cards/prod inside your browser to randomly validate the
@@ -122,22 +122,22 @@ spring.application.name=configserver
 spring.profiles.active=native
 spring.cloud.config.server.native.search-locations=file:///C://config
 server.port=8071
-encrypt.key=eazybytes
+encrypt.key=mamadou4bah
 ```
 -  Go to your Spring Boot main class **ConfigserverApplication.java** and right click-> Run As -> Java Application. This will start your Spring Boot application successfully at port 8071 which is the port we configured inside **application.properties**. Your can confirm the same by looking at the console logs.
 - Access the URLs like http://localhost:8071/accounts/default, http://localhost:8071/loans/dev, http://localhost:8071/cards/prod inside your browser to randomly validate that properties are being read from configured file system by Config Server for all the three microservices **accounts, loans and cards**.
 - Stop the Config Server microservices which started at port 8071 earlier.  
-- Create Github repository and upload all the 9 property files related to **accounts, loans and cards** microservices in to it like mentioned in the course. You can refer to https://github.com/eazybytes/microservices-config as a sample reference.
+- Create Github repository and upload all the 9 property files related to **accounts, loans and cards** microservices in to it like mentioned in the course. You can refer to https://github.com/mamadou4bah/microservices-config as a sample reference.
 - Open the **application.properties** inside **configserver** microservices and make the following entries inside it which will help in reading the properties from a given Github repository. 
 ### \src\main\resources\application.properties
 ```
 spring.application.name=configserver
 spring.profiles.active=git
-spring.cloud.config.server.git.uri=https://github.com/eazybytes/microservices-config.git
+spring.cloud.config.server.git.uri=https://github.com/mamadou4bah/microservices-config.git
 spring.cloud.config.server.git.clone-on-start=true
 spring.cloud.config.server.git.default-label=main
 server.port=8071
-encrypt.key=eazybytes
+encrypt.key=mamadou4bah
 ```
 -  Go to your Spring Boot main class **ConfigserverApplication.java** and right click-> Run As -> Java Application. This will start your Spring Boot application successfully at port 8071 which is the port we configured inside **application.properties**. Your can confirm the same by looking at the console logs.
 - Access the URLs like http://localhost:8071/accounts/default, http://localhost:8071/loans/dev, http://localhost:8071/cards/prod inside your browser to randomly validate that properties are being read from configured Github location by Config Server for all the three microservices **accounts, loans and cards**.
@@ -299,7 +299,7 @@ encrypt.key=eazybytes
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
 					<image>
-						<name>eazybytes/${project.artifactId}</name>
+						<name>mamadou4bah/${project.artifactId}</name>
 					</image>
 				</configuration>
 			</plugin>
@@ -384,7 +384,7 @@ encrypt.key=eazybytes
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
 					<image>
-						<name>eazybytes/${project.artifactId}</name>
+						<name>mamadou4bah/${project.artifactId}</name>
 					</image>
 				</configuration>
 			</plugin>
@@ -452,13 +452,13 @@ management.endpoints.web.exposure.include=*
 ```
 -  Like we discussed in the course, under Accounts microservice project, please create the classes **AccountsServiceConfig.java**, **Properties.java** and update **AccountsController.java** to add a new GET API with the name **/account/properties**. After making the changes, these classes should like below.
 
-### accounts\src\main\java\com\eazybytes\accounts\config\AccountsServiceConfig.java
+### accounts\src\main\java\com\mamadou4bah\accounts\config\AccountsServiceConfig.java
 
 ```java
 /**
  * 
  */
-package com.eazybytes.accounts.config;
+package com.mamadou4bah.accounts.config;
 
 import java.util.List;
 import java.util.Map;
@@ -487,10 +487,10 @@ public class AccountsServiceConfig {
 }
 
 ```
-### \accounts\src\main\java\com\eazybytes\accounts\model\Properties.java
+### \accounts\src\main\java\com\mamadou4bah\accounts\model\Properties.java
 
 ```java
-package com.eazybytes.accounts.model;
+package com.mamadou4bah.accounts.model;
 
 import java.util.List;
 import java.util.Map;
@@ -516,13 +516,13 @@ public class Properties {
 
 }
 ```
-### \accounts\src\main\java\com\eazybytes\accounts\controller\AccountsController.java
+### \accounts\src\main\java\com\mamadou4bah\accounts\controller\AccountsController.java
 
 ```java
 /**
  * 
  */
-package com.eazybytes.accounts.controller;
+package com.mamadou4bah.accounts.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -578,13 +578,13 @@ public class AccountsController {
 ```
 -  Like we discussed in the course, under Loans microservice project, please create the classes **LoansServiceConfig.java**, **Properties.java** and update **LoansController.java** to add a new GET API with the name **/loans/properties**. After making the changes, these classes should like below.
 
-### \loans\src\main\java\com\eazybytes\loans\config\LoansServiceConfig.java
+### \loans\src\main\java\com\mamadou4bah\loans\config\LoansServiceConfig.java
 
 ```java
 /**
  * 
  */
-package com.eazybytes.loans.config;
+package com.mamadou4bah.loans.config;
 
 import java.util.List;
 import java.util.Map;
@@ -612,10 +612,10 @@ public class LoansServiceConfig {
 
 }
 ```
-### \loans\src\main\java\com\eazybytes\loans\model\Properties.java
+### \loans\src\main\java\com\mamadou4bah\loans\model\Properties.java
 
 ```java
-package com.eazybytes.loans.model;
+package com.mamadou4bah.loans.model;
 
 import java.util.List;
 import java.util.Map;
@@ -641,13 +641,13 @@ public class Properties {
 
 }
 ```
-### \loans\src\main\java\com\eazybytes\loans\controller\LoansController.java
+### \loans\src\main\java\com\mamadou4bah\loans\controller\LoansController.java
 
 ```java
 /**
  * 
  */
-package com.eazybytes.loans.controller;
+package com.mamadou4bah.loans.controller;
 
 import java.util.List;
 
@@ -704,13 +704,13 @@ public class LoansController {
 ```
 -  Like we discussed in the course, under Cards microservice project, please create the classes **CardsServiceConfig.java**, **Properties.java** and update **CardsController.java** to add a new GET API with the name **/cards/properties**. After making the changes, these classes should like below.
 
-### \cards\src\main\java\com\eazybytes\cards\config\CardsServiceConfig.java
+### \cards\src\main\java\com\mamadou4bah\cards\config\CardsServiceConfig.java
 
 ```java
 /**
  * 
  */
-package com.eazybytes.cards.config;
+package com.mamadou4bah.cards.config;
 
 import java.util.List;
 import java.util.Map;
@@ -738,10 +738,10 @@ public class CardsServiceConfig {
 
 }
 ```
-### \cards\src\main\java\com\eazybytes\cards\model\Properties.java
+### \cards\src\main\java\com\mamadou4bah\cards\model\Properties.java
 
 ```java
-package com.eazybytes.cards.model;
+package com.mamadou4bah.cards.model;
 
 import java.util.List;
 import java.util.Map;
@@ -767,13 +767,13 @@ public class Properties {
 
 }
 ```
-### \cards\src\main\java\com\eazybytes\cards\controller\CardsController.java
+### \cards\src\main\java\com\mamadou4bah\cards\controller\CardsController.java
 
 ```java
 /**
  * 
  */
-package com.eazybytes.cards.controller;
+package com.mamadou4bah.cards.controller;
 
 import java.util.List;
 
@@ -844,7 +844,7 @@ version: "3.8"
 services:
 
   configserver:
-    image: eazybytes/configserver:latest
+    image: mamadou4bah/configserver:latest
     mem_limit: 700m
     ports:
       - "8071:8071"
@@ -852,7 +852,7 @@ services:
      - eazybank
       
   accounts:
-    image: eazybytes/accounts:latest
+    image: mamadou4bah/accounts:latest
     mem_limit: 700m
     ports:
       - "8080:8080"
@@ -871,7 +871,7 @@ services:
       SPRING_CONFIG_IMPORT: configserver:http://configserver:8071/
   
   loans:
-    image: eazybytes/loans:latest
+    image: mamadou4bah/loans:latest
     mem_limit: 700m
     ports:
       - "8090:8090"
@@ -890,7 +890,7 @@ services:
       SPRING_CONFIG_IMPORT: configserver:http://configserver:8071/
     
   cards:
-    image: eazybytes/cards:latest
+    image: mamadou4bah/cards:latest
     mem_limit: 700m
     ports:
       - "9000:9000"
@@ -919,7 +919,7 @@ version: "3.8"
 services:
 
   configserver:
-    image: eazybytes/configserver:latest
+    image: mamadou4bah/configserver:latest
     mem_limit: 700m
     ports:
       - "8071:8071"
@@ -927,7 +927,7 @@ services:
      - eazybank
       
   accounts:
-    image: eazybytes/accounts:latest
+    image: mamadou4bah/accounts:latest
     mem_limit: 700m
     ports:
       - "8080:8080"
@@ -946,7 +946,7 @@ services:
       SPRING_CONFIG_IMPORT: configserver:http://configserver:8071/
   
   loans:
-    image: eazybytes/loans:latest
+    image: mamadou4bah/loans:latest
     mem_limit: 700m
     ports:
       - "8090:8090"
@@ -965,7 +965,7 @@ services:
       SPRING_CONFIG_IMPORT: configserver:http://configserver:8071/
     
   cards:
-    image: eazybytes/cards:latest
+    image: mamadou4bah/cards:latest
     mem_limit: 700m
     ports:
       - "9000:9000"
@@ -994,7 +994,7 @@ version: "3.8"
 services:
 
   configserver:
-    image: eazybytes/configserver:latest
+    image: mamadou4bah/configserver:latest
     mem_limit: 700m
     ports:
       - "8071:8071"
@@ -1002,7 +1002,7 @@ services:
      - eazybank
       
   accounts:
-    image: eazybytes/accounts:latest
+    image: mamadou4bah/accounts:latest
     mem_limit: 700m
     ports:
       - "8080:8080"
@@ -1021,7 +1021,7 @@ services:
       SPRING_CONFIG_IMPORT: configserver:http://configserver:8071/
   
   loans:
-    image: eazybytes/loans:latest
+    image: mamadou4bah/loans:latest
     mem_limit: 700m
     ports:
       - "8090:8090"
@@ -1040,7 +1040,7 @@ services:
       SPRING_CONFIG_IMPORT: configserver:http://configserver:8071/
     
   cards:
-    image: eazybytes/cards:latest
+    image: mamadou4bah/cards:latest
     mem_limit: 700m
     ports:
       - "9000:9000"
