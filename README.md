@@ -127,10 +127,12 @@ NB: Resilience4j use aop programming.
 | "Rate limit" | Limits the number of calls that a service receives in a time. |
 | "Bulkhead" | Limits the number of outgoing concurrent requests to a service to avoid overloading |
 
-## Section10: Api Gateway -> Spring Cloud Gateway
+## Section10: Api Gateway and Cross cutting concerns -> Spring Cloud Gateway and TraceId
 Spring Cloud Gateway is a library for building an API Gateway.
 For more information about spring cloud gateway, see this url:
 ########################## https://spring.io/projects/spring-cloud-gateway#overview ##########################
+
+--requests----> Gateway ---interacted with---> Eureka ---forward---> Accounts app(witch registered in eureka)
 
 ## Kubernetes Commands used in the course
 
