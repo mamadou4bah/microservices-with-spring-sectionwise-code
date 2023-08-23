@@ -110,7 +110,7 @@ https://buildpacks.io/    https://paketo.io/
 ## Section7: Spring Cloud Config -> for configuration management in microservices
 https://spring.io/projects/spring-cloud-config
 
-## Section8: Service discovery and registration pattern -> Eureka server
+## Section8: Service discovery and registration pattern -> Spring Cloud Eureka
  Allow to centralize service and registration
 | "Spring cloud Netflix's Eureka Service" | witch will act as a service discovery agent |
 | "Spring cloud Load Balancer" | Library for client-side load balancing |
@@ -126,6 +126,11 @@ NB: Resilience4j use aop programming.
 | "Retry" | Use to make retries when a service has temporarily failed. |
 | "Rate limit" | Limits the number of calls that a service receives in a time. |
 | "Bulkhead" | Limits the number of outgoing concurrent requests to a service to avoid overloading |
+
+## Section10: Api Gateway -> Spring Cloud Gateway
+Spring Cloud Gateway is a library for building an API Gateway.
+For more information about spring cloud gateway, see this url:
+########################## https://spring.io/projects/spring-cloud-gateway#overview ##########################
 
 ## Kubernetes Commands used in the course
 
