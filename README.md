@@ -117,6 +117,8 @@ https://spring.io/projects/spring-cloud-config
 | "Netflix Feign client" | To look up for a service b/w microservices (To invoke other microservices) |
 
 ## Section9: Resiliency or Self-healing -> Resilience4j: The capacity to withstand or to recover quickly from difficulties.
+########################## https://www.baeldung.com/spring-boot-resilience4j ##########################
+
 Resilience4j offers the following patterns for increasing fault tolerance due to network problems or failure of any of the multiple service.
 NB: Resilience4j use aop programming.
 | "Circuit breaker" | Used to stop making requests when a service invoked is failing |

@@ -7,7 +7,9 @@ import java.util.List;
 
 import com.mamadou4bah.accounts.config.AccountsServiceConfig;
 import com.mamadou4bah.accounts.repository.AccountsRepository;
+import io.github.resilience4j.bulkhead.annotation.Bulkhead;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+import io.github.resilience4j.timelimiter.annotation.TimeLimiter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -73,7 +75,9 @@ public class AccountsController {
 	@PostMapping("/myCustomerDetails")
 
 	// @CircuitBreaker(name = "detailsForCustomerSupportApp",fallbackMethod = "myCustomerDetailsFallBack")
-	@Retry(name = "retryForCustomerDetails", fallbackMethod = "myCustomerDetailsFallBack")
+	// @Retry(name = "retryForCustomerDetails", fallbackMethod = "myCustomerDetailsFallBack")
+	// @RateLimiter(name = "rateLimiterForCustomerDetails", fallbackMethod = "sayHelloFallback")
+	@Bulkhead(name = "bulkheadForCustomerDetails", fallbackMethod = "myCustomerDetailsFallBack")
 	public CustomerDetails myCustomerDetails(@RequestBody Customer customer) {
 		Accounts accounts = accountsRepository.findByCustomerId(customer.getCustomerId());
 		List<Loans> loans = loansFeignClient.getLoansDetails(customer);
@@ -95,16 +99,6 @@ public class AccountsController {
 		customerDetails.setLoans(loans);
 		return customerDetails;
 
-	}
-	
-	@GetMapping("/sayHello")
-	@RateLimiter(name = "sayHello", fallbackMethod = "sayHelloFallback")
-	public String sayHello() {
-		return "Hello, Welcome to EazyBank";
-	}
-
-	private String sayHelloFallback(Throwable t) {
-		return "Hi, Welcome to EazyBank";
 	}
 
 }
