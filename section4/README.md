@@ -2,7 +2,7 @@
 ---
 
 **Description:** This repository has three maven projects with the names **accounts, loans, cards**. These three projects will acts as a microservices and these are build by 
-taking **EazyBank** as an example Bank application. Below are the key steps that are followed while creating these projects.
+taking **MbaBank** as an example Bank application. Below are the key steps that are followed while creating these projects.
 
 **Key steps:**
 - Go to https://start.spring.io/
@@ -801,5 +801,5 @@ INSERT INTO `cards` (`card_number`, `customer_id`, `card_type`, `total_limit`, `
 }
 ```
 ---
-### HURRAY !!! Congratulations you successfully setup three microservices related to Accounts, Loans and Cards of EazyBank Application
+### HURRAY !!! Congratulations you successfully setup three microservices related to Accounts, Loans and Cards of MbaBank Application
 ---
