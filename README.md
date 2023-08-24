@@ -134,6 +134,19 @@ For more information about spring cloud gateway, see this url:
 
 --requests----> Gateway ---interacted with---> Eureka ---forward---> Accounts app(witch registered in eureka)
 
+## Section11: Distributed tracing and log aggregation
+For manage that, we are using Spring Cloud Sleuth (https://spring.io/projects/spring-cloud-sleuth) and Zipkin (https://zipkin.io/). |
+ Spring Cloud Sleuth will add three pieces of information to all the logs written by a microservice. |
+                           [<App name>, <Trace ID>, <Span ID>]   
+ . Application name of the service: this is going to the application name where the log entry is being made. Spring Cloud Sleuth get 
+this name from the 'spring.application.name' property 
+ . Trace ID: is equivalent term for correlation ID. It's a unique number that represents an entire transaction.
+ . Span ID: It's a unique number that represents part of the overall transaction. Each service participating within the transaction 
+ will have its own span ID. Span IDS are particulary relevant when you integrate with zipkin to visulaize your transactions.
+ 
+ NB: By default spring-sleuth send only 10% of the logs to your Zipkin.
+ spring.sleuth.sampler.percentage=0.1
+
 ## Kubernetes Commands used in the course
 
 |     Kubernetes Command       |     Description          |

@@ -1,0 +1,30 @@
+version: "3.8"
+
+services:
+
+  accounts:
+    image: mamadou4bah/accounts:latest
+    mem_limit: 700m
+    ports:
+      - "8080:8080"
+    networks:
+      - mbabank-network
+    
+  loans:
+    image: mamadou4bah/loans:latest
+    mem_limit: 700m
+    ports:
+      - "8090:8090"
+    networks:
+      - mbabank-network
+    
+  cards:
+    image: mamadou4bah/cards:latest
+    mem_limit: 700m
+    ports:
+      - "9000:9000"
+    networks:
+      - mbabank-network
+    
+networks:
+  mbabank-network:
