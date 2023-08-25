@@ -146,6 +146,15 @@ this name from the 'spring.application.name' property
  
  NB: By default spring-sleuth send only 10% of the logs to your Zipkin.
  spring.sleuth.sampler.percentage=0.1
+ 
+ ## Section12: Monitoring Microservices Metrics & Health using Prometheus, Grafana and Webhook
+ For do this, we are using Prometheus and Grafana.
+ Prometheus: try to pull the metrics from your individual microservices by calling the actuator urls
+ that it exposed about health metrics.
+ Micrometer prepare the data as Prometheus format and Grafana.
+ 
+ Webhook is a mechanism which we can invoke using http url whenever some condition met inside your monitoring system.
+ Grafana invoke the webhook.
 
 ## Kubernetes Commands used in the course
 
