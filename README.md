@@ -156,8 +156,50 @@ this name from the 'spring.application.name' property
  Webhook is a mechanism which we can invoke using http url whenever some condition met inside your monitoring system.
  Grafana invoke the webhook.
 
-## Kubernetes Commands used in the course
-
+## Section13: Kubernetes Commands used in the course
+Kubernetes is an open-source system for automating deployment, scaling and managing containerized applications.
+It is the most famous orchestration platform and it is cloud neutral.
+Kubernetes provides you with a framework to run distributed systems resiliently. It takes care of scaling and failover 
+for your application, provides deployment patterns, and more. It provides you with:
+     . Service discovery and load balancing
+	 . Storage orchestration
+	 . Automated rollouts and rollbacks
+	 . Automatic bin packing
+	 . Self-healing
+	 . Secret and configuration management
+	 
+	## Architecture of kubernetes
+		Cluster: is a collection of various servers working together to achieve some results. So in any cluster there will be a master nodes and worker nodes.
+		The Worker nodes: will take care of doing all the work, like taking the requests from the clients and executing the code inside their containers or Docker images.
+		The master nodes: will take care of your entire cluster (worker nodes) is running healthy without any issues inside the cluster. It will do some salf-healing.
+	
+	## The components inside the Master nodes 
+		first-> kube API Server: The master nodes exposes all its API operations using kube API Server like REST Service. It's a gateway into your cluster.
+				So anytime if you want to interact with a kubernetes cluster, you have to only interact with the master nodes not the worker nodes.
+		two -> scheduler: if you give such commands, Kube API Server will tell to scheduler. So once scheduler received that information, its go and check which worker node
+			   has less load. It will schedule the deployment into that corresponding (specific) worker node through kubelet, the kubelet will create a new pod inside
+			   that worker nodes. Next the container will be deployed inside the pod.
+		Three -> Controller Manager: its keep check of the health of the containers and worker nodes. The controller Manager every time interact with Etcd to understand what is 
+				 the expected number of instances and it will compare what is existing right. It will always make sure the current state and desired state is matching 
+				 with each other.
+		Four -> Etcd: it's brain of your cluster, it's the database which stores the information of all your cluster details with the format key values (for example: how many worker nodes are there ? ,
+				How many POD are there inside worker nodes ?, How many container are deployed ?).
+			  
+	
+	## The components inside the Worker nodes 
+		Inside the worker nodes, we have four importants components:
+		first -> Kubelet: is an agent that run inside each and every worker nodes and with kubelet only there will be a communication between master nodes and worker nodes.
+		two -> Docker: Every worker nodes inside the kubernetes will have Docker installed them. Without Docker there is no kubernetes.
+		tree -> Kube-proxy: will help to expose all your containers endpoint URLs to the end users like you can make a service either public or internal.
+		four -> POD: is a smallest deployment component that you can deploy inside your worker nodes. Inside PODS we are going to deploy all your containers.
+				The pod can have a single, two, three,... containers.
+				Those pods will have an IP, port number to interact with the containters and those details will be exposed to outside world with the help of kube-proxy
+				and the end users can interact with the microservices. The help of URLs exposed by kube-proxy
+				
+		To install kubernetes and minikube in windows, please follow these urls:
+		https://kubernetes.io/fr/docs/tasks/tools/install-minikube/
+		https://docs.chocolatey.org/en-us/choco/setup
+	
 |     Kubernetes Command       |     Description          |
 | ------------- | ------------- |
 | "kubectl apply -f filename" | To create a deployment/service/configmap based on a given YAML file |
@@ -177,9 +219,9 @@ this name from the 'spring.application.name' property
 | "kubectl get deployment deployment-id" | To get the details of a given deployment |
 | "kubectl get configmaps" | To get all the configmap details inside your cluster |
 | "kubectl get configmap configmap-id" | To get the details of a given configmap |
-| "kubectl get events --sort-by=.metadata.creationTimestamp" | To get all the events occured inside your cluster |
 | "kubectl scale deployment accounts-deployment --replicas=3" | To increase the number of replicas for a deployment inside your cluster |
 | "kubectl set image deployment accounts-deployment accounts=mamadou4bah/accounts:k8s" | To set a new image for a deployment inside your cluster |
+| "kubectl get events --sort-by=.metadata.creationTimestamp" | To get all the events occured inside your cluster |
 | "kubectl rollout history deployment accounts-deployment" | To know the rollout history for a deployment inside your cluster |
 | "kubectl rollout undo deployment accounts-deployment --to-revision=1" | To rollback to a given revision for a deployment inside your cluster |
 | "kubectl autoscale deployment accounts-deployment --min=3 --max=10 --cpu-percent=70" | To create automatic scaling using HPA for a deployment inside your cluster |
