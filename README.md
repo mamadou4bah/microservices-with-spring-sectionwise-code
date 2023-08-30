@@ -227,16 +227,23 @@ for your application, provides deployment patterns, and more. It provides you wi
 | "kubectl autoscale deployment accounts-deployment --min=3 --max=10 --cpu-percent=70" | To create automatic scaling using HPA for a deployment inside your cluster |
 | "kubectl logs node-id" | To get a logs of a given node inside your cluster |
 
-## Helm Commands used in the course
+## Helm Commands used in the course (https://helm.sh) (https://helm.sh/docs/intro/install/)
+Helm is the package manager for kubernetes. Helm is the best way to find, share and use software built for kubernetes.
+Package manager is a software company which help us in installing and installing and upgrading other software components.
 
 |     Helm Command       |     Description          |
 | ------------- | ------------- |
 | "helm create [NAME]" | Create a default chart with the given name |
-| "helm dependencies build" | To recompile the given helm chart |
+| "helm dependencies build or helm dependency build" | To recompile the given helm chart |
+| "helm template [NAME] [CHART]" | Render chart templates locally along with the values |
 | "helm install [NAME] [CHART]" | Install the given helm chart into K8s cluster |
+| "helm list" | Lists all of the helm releases inside a K8s cluster |
 | "helm upgrade [NAME] [CHART]" | Upgrades a specified release to a new version of a chart |
 | "helm history [NAME]" | Display historical revisions for a given release |
 | "helm rollback [NAME] [REVISION]" | Roll back a release to a previous revision |
 | "helm uninstall [NAME]" | Uninstall all of the resources associated with a given release |
-| "helm template [NAME] [CHART]" | Render chart templates locally along with the values |
 | "helm list" | Lists all of the helm releases inside a K8s cluster |
+
+NB: [NAME]: is deployment name
+    [CHART]: is chart name
+	[REVISION]: is the revision number
