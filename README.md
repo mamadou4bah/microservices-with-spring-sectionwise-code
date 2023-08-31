@@ -247,3 +247,20 @@ Package manager is a software company which help us in installing and installing
 NB: [NAME]: is deployment name
     [CHART]: is chart name
 	[REVISION]: is the revision number
+
+## Section 16: Securing Microservices using k8s Service:
+- Kubernetes Ingress: is a powerful way to centrally and flexibly manage HTTP and HTTPS service exposure in a Kubernetes cluster.
+The use of Ingress makes it possible to simplify the management of external access to services by grouping the routing rules at the level of a single resource.
+This avoids having to create Load Balancers or other exposure mechanisms for each individual service. It's very similar to API Gateway.
+
+ - Cluster IP: this is the default service that uses an internal Cluster IP to expose Pods. In Cluster IP, the services are not available for external access of
+ the cluster and used for internal communications between different pods or microservices in the cluster.
+ 
+ - NodePort Service: This service exposes outside and allows the outside k8s pods through the node port which is the port opened and Node end. The pods can be accessed
+ from external using <NodeIp>:<NodePort>.
+ 
+ - LoadBalancer Service: this service is expodes like in NodePort but create a loadBalancer in the cloud where k8s is running that receives external requests to
+ the service. It then distributes them among the cluster nodes using NodePort.
+ 
+ NB: To securing your microservices, NodePort and LoadBalancer are not recommended.
+ 
