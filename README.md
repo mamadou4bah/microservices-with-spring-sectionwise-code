@@ -264,3 +264,8 @@ This avoids having to create Load Balancers or other exposure mechanisms for eac
  
  NB: To securing your microservices, NodePort and LoadBalancer are not recommended.
  
+ ## Section 17: Securig microservices using OAuth2:
+ - Keycloak: is an open-source identity and access management tool which build based upon the auto specifications.
+	docker run -p 7080:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin quay.io/keycloak/keycloak:18.0.0 start-dev
+	http://localhost:7080/realms/master/.well-known/openid-configuration
+ 
