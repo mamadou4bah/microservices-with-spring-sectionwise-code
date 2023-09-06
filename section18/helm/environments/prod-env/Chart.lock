@@ -1,0 +1,27 @@
+dependencies:
+- name: mbabank-common
+  repository: file://../../mbabank-common
+  version: 0.1.0
+- name: zipkin
+  repository: file://../../mbabank-services/zipkin
+  version: 0.1.0
+- name: configserver
+  repository: file://../../mbabank-services/configserver
+  version: 0.1.0
+- name: eurekaserver
+  repository: file://../../mbabank-services/eurekaserver
+  version: 0.1.0
+- name: accounts
+  repository: file://../../mbabank-services/accounts
+  version: 0.1.0
+- name: cards
+  repository: file://../../mbabank-services/cards
+  version: 0.1.0
+- name: loans
+  repository: file://../../mbabank-services/loans
+  version: 0.1.0
+- name: gatewayserver
+  repository: file://../../mbabank-services/gatewayserver
+  version: 0.1.0
+digest: sha256:38e1aee3eb561829cf3de3320edce122c56e08099c8bb48859baad97b2ec0484
+generated: "2023-09-06T17:04:51.6085967+02:00"
